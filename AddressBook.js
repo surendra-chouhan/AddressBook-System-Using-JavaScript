@@ -187,16 +187,14 @@ function count() {
 
 function search_by_city(){
     let search = addressBook.filter(ele => ele.city == 'Mumbai');
-    if (search != null){
-        console.log("Searched Contacts in Mumbai");
-    }
+    console.log("Contacts in Mumbai city are : ");
+    console.log(search);
 }
 
 function search_by_state(){
     let search = addressBook.filter(ele => ele.state == 'Maharashtra');
-    if (search != null) {
-        console.log("Searched Contacts in Maharashtra");
-    }
+    console.log("Contacts in Maharashtra state are : ");
+    console.log(search);
 }
 
 addContact();
