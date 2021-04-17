@@ -135,15 +135,16 @@ class AddressBook {
 }
 
 let addressBook = [];
+function defaultContacts() {
+    let contact1 = new AddressBook("Surendra", "Chouhan", "Wadala", "Mumbai", "Maharashtra", 400037, 9987451480, "chouhansurendra88@gmail.com");
+    let contact2 = new AddressBook("Omkar", "Mali", "Palaspe", "Panvel", "Maharashtra", 400088, 9029090642, "omkar@gmail.com");
+    let contact3 = new AddressBook("Rohit", "Kanojia", "Matunga", "Mumbai", "Maharashtra", 400031, 8080975632, "rohit@hotmail.com");
 
-let contact1 = new AddressBook("Surendra", "Chouhan", "Wadala", "Mumbai", "Maharashtra", 400037, 9987451480, "chouhansurendra88@gmail.com");
-let contact2 = new AddressBook("Omkar", "Mali", "Palaspe", "Panvel", "Maharashtra", 400088, 9029090642, "omkar@gmail.com");
-let contact3 = new AddressBook("Rohit", "Kanojia", "Matunga", "Mumbai", "Maharashtra", 400031, 8080975632, "rohit@hotmail.com");
-
-addressBook.push(contact1);
-addressBook.push(contact2);
-addressBook.push(contact3);
-console.log(addressBook);
+    addressBook.push(contact1);
+    addressBook.push(contact2);
+    addressBook.push(contact3);
+    console.log(addressBook);
+}
 
 function addContact() {
     let contact = new AddressBook("Kaushal", "Phutane", "Parel", "Mumbai", "Maharashtra", 400027, 8080956636, "kaushal@gmail.com");
@@ -214,11 +215,15 @@ function sort_contacts(){
     console.log(addressBook.sort());
 }
 
-addContact();
-editContact();
-deleteContact();
-search_by_city();
-search_by_state();
-count_by_city();
-count_by_state();
-sort_contacts();
+function run_addressbook(){
+    addContact();
+    editContact();
+    deleteContact();
+    search_by_city();
+    search_by_state();
+    count_by_city();
+    count_by_state();
+    sort_contacts();
+}
+
+run_addressbook();
