@@ -209,6 +209,11 @@ function count_by_state() {
     console.log("Number of Contacts in state Maharashtra are : " + size_state);
 }
 
+function sort_contacts(){
+    console.log("Contacts after sorting alphabetically : ");
+    console.log(addressBook.sort());
+}
+
 addContact();
 editContact();
 deleteContact();
@@ -216,3 +221,4 @@ search_by_city();
 search_by_state();
 count_by_city();
 count_by_state();
+sort_contacts();
